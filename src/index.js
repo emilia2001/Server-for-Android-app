@@ -34,7 +34,7 @@ app.use(jwt(jwtConfig));
 // protected
 const protectedApiRouter = new Router({ prefix });
 protectedApiRouter
-  .use('/item', noteRouter.routes());
+  .use('/student', noteRouter.routes());
 app
   .use(protectedApiRouter.routes())
   .use(protectedApiRouter.allowedMethods());
